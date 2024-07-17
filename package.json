@@ -10,7 +10,7 @@
     "start:dev": "ts-node src/main.ts",
     "start:prod": "node dist/main.js",
     "typeorm": "ts-node -r tsconfig-paths/register ./node_modules/typeorm/cli.js",
-    "migration:generate": "yarn typeorm migration:generate -d ./ormconfig.ts",
+    "migration:generate": "yarn typeorm migration:generate -d ./ormconfig",
     "migration:create": "yarn run typeorm migration:create -d ormconfig",
     "new": "hygen new",
     "migration:revert": "yarn run typeorm migration:revert",
