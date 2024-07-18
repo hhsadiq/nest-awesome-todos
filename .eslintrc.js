@@ -324,7 +324,7 @@ module.exports = {
     es6: true,
     node: true,
   },
-  ignorePatterns: ['.eslintrc.js'],
+  ignorePatterns: ['.eslintrc.js', 'ormconfig.ts'],
   parserOptions: {
     ecmaVersion: 2022,
     project: './tsconfig.eslint.json',
