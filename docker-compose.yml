@@ -31,7 +31,7 @@ services:
     ports:
       - "8080:80"
     volumes:
-      - /data/pgadmin:/root/.pgadmin
+      - /Users/hhsadiq/dev/docker_data/pgadmin:/root/.pgadmin # update the path in the docker virtual file sharing as well
     env_file:
       - .env
     links:
