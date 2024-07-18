@@ -25,6 +25,9 @@ WORKDIR /usr/src/app
 COPY --from=dist dist /usr/src/app/dist
 COPY --from=node_modules node_modules /usr/src/app/node_modules
 
+# Ensure the i18n directory is copied to the dist folder
+COPY ./src/i18n /usr/src/app/dist/i18n
+
 COPY . /usr/src/app
 
 EXPOSE $PORT

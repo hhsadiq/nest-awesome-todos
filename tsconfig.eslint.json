@@ -3,7 +3,10 @@
   "include": [
     "src/**/*",
     "*.{ts,js,mts}",
-    "test/**/*"
+    "test/**/*",
+    "ormconfig.ts",
+    "*.ts",
+    "lint-staged.config.js"
   ],
   "exclude": [
     "node_modules",
