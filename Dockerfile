@@ -17,6 +17,7 @@ FROM node:lts
 ARG PORT=3000
 
 ENV NODE_ENV=production
+ENV TZ=Asia/Karachi
 
 RUN mkdir -p /usr/src/app
 
