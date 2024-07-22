@@ -1,13 +1,22 @@
 {
-    "cSpell.words": [
-        "Injectable",
-        "microservices",
-        "nestjs",
-        "postgres"
-    ],
-    "editor.detectIndentation": false,
-    "rift.autostart": false,
-    "i18n-ally.localesPaths": [
-      "src/i18n"
-    ]
+  "cSpell.words": ["Injectable", "microservices", "nestjs", "postgres"],
+  "editor.detectIndentation": false,
+  "editor.tabSize": 2,
+  "editor.insertSpaces": true,
+  "editor.defaultFormatter": "esbenp.prettier-vscode",
+  "editor.formatOnSave": true,
+  "rift.autostart": false,
+  "i18n-ally.localesPaths": ["src/i18n"],
+  "[typescript]": {
+    "editor.defaultFormatter": "esbenp.prettier-vscode"
+  },
+  "[typescriptreact]": {
+    "editor.defaultFormatter": "esbenp.prettier-vscode"
+  },
+  "[javascript]": {
+    "editor.defaultFormatter": "esbenp.prettier-vscode"
+  },
+  "[json]": {
+    "editor.defaultFormatter": "esbenp.prettier-vscode"
+  }
 }

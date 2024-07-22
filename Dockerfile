@@ -7,11 +7,6 @@ COPY . ./
 
 RUN yarn build:prod
 
-FROM node:lts AS node_modules
-COPY package.json yarn.lock ./
-
-RUN yarn install --prod
-
 FROM node:lts
 
 ARG PORT=3000
@@ -24,12 +19,13 @@ RUN mkdir -p /usr/src/app
 WORKDIR /usr/src/app
 
 COPY --from=dist dist /usr/src/app/dist
-COPY --from=node_modules node_modules /usr/src/app/node_modules
+COPY --from=dist node_modules /usr/src/app/node_modules
 
 # Ensure the i18n directory is copied to the dist folder
 COPY ./src/i18n /usr/src/app/dist/i18n
 
-COPY . /usr/src/app
+# Removed to prevent copying local node_modules into the container
+# COPY . /usr/src/app
 
 EXPOSE $PORT
 
